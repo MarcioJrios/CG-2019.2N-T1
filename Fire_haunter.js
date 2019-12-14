@@ -26,8 +26,8 @@ function init() {
 
     new RGBELoader()
         .setDataType( THREE.UnsignedByteType )
-        .setPath( 'textures/equirectangular/' )
-        .load( 'pedestrian_overpass_8k.hdr', function ( texture ) {
+        .setPath( '/textures/' )
+        .load( 'pedestrian_overpass_2k.hdr', function ( texture ) {
 
             var options = {
                 minFilter: texture.minFilter,
@@ -46,7 +46,7 @@ function init() {
 
             // model
 
-            var loader = new GLTFLoader().setPath( '../../../Modelo_Pokemon/' );
+            var loader = new GLTFLoader().setPath( '/Modelo_Pokemon/' );
             loader.load( 'Haunter_pokemon.glb', function ( gltf ) {
 
                 gltf.scene.traverse( function ( child ) {
